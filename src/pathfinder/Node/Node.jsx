@@ -9,6 +9,9 @@ export default class Node extends Component {
       isFinish,
       isStart,
       isWall,
+      onMouseDown,
+      onMouseEnter,
+      onMouseUp,
       row,
     } = this.props;//this receives that destructured values from map as props
     
@@ -24,8 +27,10 @@ export default class Node extends Component {
     return (
       <td
         id={`node-${row}-${col}`}
-        className={`node ${extraClassName}`}>
-        </td>
+        className={`node ${extraClassName}`}
+        onMouseDown={() => onMouseDown(row, col)}
+        onMouseEnter={() => onMouseEnter(row, col)}
+        onMouseUp={() => onMouseUp()}></td>
     );
   }
 }
