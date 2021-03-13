@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Node from './Node/Node';
+import {AStar} from '../algorithms/aStar';
 
 export default class Pathfinder extends Component {
     constructor() {
